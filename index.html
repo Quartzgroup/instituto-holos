@@ -1,25 +1,951 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instituto HOLOS | Educação, Ciência e Tecnologia</title>
-<meta name="description" content="Conheça a proposta do Instituto HOLOS: integrar educação, pesquisa, tecnologia e cooperação internacional. Iniciativa PRESERVAR: ciência, territórios e resiliência.">
-<meta name="theme-color" content="#153B60">
-<style>
-:root{--blue:#153b60;--teal:#168b8a;--ink:#203547;--muted:#566a78;--line:#dce5eb;--pale:#eff7f7}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:white}a{color:var(--blue)}a:focus-visible{outline:3px solid var(--teal);outline-offset:5px}.wrap{width:min(1120px,90%);margin:auto}.skip{position:absolute;left:10px;top:-90px;background:white;padding:12px;z-index:20}.skip:focus{top:10px}header{border-bottom:1px solid var(--line);background:white;position:sticky;top:0;z-index:5}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:14px 0}.brand{font-size:20px;font-weight:700;text-decoration:none}.brand span{display:block;font-size:10px;letter-spacing:3px;color:var(--teal)}nav{display:flex;gap:25px}nav a{text-decoration:none;font-size:14px}.hero{padding:75px 0 65px;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:45px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:var(--teal);text-transform:uppercase}h1,h2,h3{line-height:1.15;color:var(--blue)}h1{font-size:clamp(36px,4.4vw,60px);letter-spacing:-2px;margin:17px 0 24px}h2{font-size:clamp(28px,3vw,40px);letter-spacing:-1px;margin:14px 0 25px}h3{font-size:21px}p{margin:0 0 20px}.lead{font-size:19px;color:var(--muted)}.hero img{width:100%;height:auto}.button{display:inline-block;padding:12px 22px;background:var(--blue);color:white;border-radius:4px;text-decoration:none;font-weight:700;margin-top:12px}.button.secondary{background:white;color:var(--blue);border:1px solid var(--line);margin-left:8px}section{padding:72px 0}.light{background:var(--pale)}.intro{max-width:750px}.split{display:grid;grid-template-columns:1fr 1fr;gap:65px}.quote{font-size:26px;border-left:3px solid var(--teal);padding-left:25px;color:var(--blue)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:35px}.item{border-top:2px solid var(--teal);padding-top:18px}.item p{color:var(--muted);font-size:16px}.number{font-size:13px;color:var(--teal);font-weight:700}.dark{background:var(--blue);color:#dce5eb}.dark h2,.dark h3{color:white}.dark .eyebrow{color:#8fdddd}.dark .item{border-color:#70c5c4}.dark .item p{color:#dce5eb}.tag{display:inline-block;border:1px solid #92b1c7;border-radius:30px;padding:5px 14px;font-size:12px;margin-bottom:12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:35px 0}.steps article{border-left:1px solid var(--line);padding-left:20px}.note{font-size:14px;color:var(--muted)}.contact{display:flex;justify-content:space-between;align-items:center;gap:35px}footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px} @media(max-width:760px){header .wrap{flex-direction:column;gap:8px}nav{gap:16px;flex-wrap:wrap;justify-content:center}.hero,.split{grid-template-columns:1fr;gap:25px}.hero{padding-top:40px}.hero img{max-width:460px;justify-self:center}.grid,.steps{grid-template-columns:1fr}.contact,footer .wrap{flex-direction:column;align-items:flex-start}section{padding:50px 0}h1{letter-spacing:-1px}.button.secondary{margin-left:0;margin-right:8px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instituto HOLOS | Educação, Ciência e Tecnologia</title>
+  <meta name="description" content="Conheça a proposta do Instituto HOLOS: integrar educação, pesquisa, tecnologia e cooperação internacional. Iniciativa PRESERVAR: ciência, territórios e resiliência.">
+  <meta name="theme-color" content="#153B60">
+
+  <style>
+    :root {
+      --blue: #153b60;
+      --teal: #168b8a;
+      --ink: #203547;
+      --muted: #566a78;
+      --line: #dce5eb;
+      --pale: #eff7f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: white;
+    }
+
+    a { color: var(--blue); }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 5px;
+    }
+
+    .wrap {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .skip {
+      position: absolute;
+      left: 10px;
+      top: -90px;
+      background: white;
+      padding: 12px;
+      z-index: 20;
+    }
+
+    .skip:focus { top: 10px; }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    header .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--teal);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .languages {
+      display: flex;
+      gap: 5px;
+    }
+
+    .languages button {
+      appearance: none;
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font: 700 12px Arial, sans-serif;
+      min-width: 40px;
+      min-height: 40px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .languages button[aria-pressed="true"] {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .languages button:hover {
+      border-color: var(--teal);
+    }
+
+    .hero {
+      padding: 75px 0 65px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .hero > * { min-width: 0; }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--teal);
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      color: var(--blue);
+    }
+
+    h1 {
+      font-size: clamp(34px, 4vw, 56px);
+      letter-spacing: -2px;
+      margin: 17px 0 24px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: -1px;
+      margin: 14px 0 25px;
+    }
+
+    h3 { font-size: 21px; }
+
+    .translated-heading {
+      white-space: pre-line;
+      overflow-wrap: break-word;
+    }
+
+    p { margin: 0 0 20px; }
+
+    .lead {
+      font-size: 19px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--blue);
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--line);
+      margin-left: 8px;
+    }
+
+    section { padding: 72px 0; }
+
+    .light { background: var(--pale); }
+
+    .intro { max-width: 750px; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+    }
+
+    .quote {
+      font-size: 26px;
+      border-left: 3px solid var(--teal);
+      padding-left: 25px;
+      color: var(--blue);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 35px;
+    }
+
+    .item {
+      border-top: 2px solid var(--teal);
+      padding-top: 18px;
+    }
+
+    .item p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .number {
+      font-size: 13px;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .dark {
+      background: var(--blue);
+      color: #dce5eb;
+    }
+
+    .dark h2,
+    .dark h3 { color: white; }
+
+    .dark .eyebrow,
+    .dark .number { color: #8fdddd; }
+
+    .dark .lead,
+    .dark .item p { color: #dce5eb; }
+
+    .dark .item { border-color: #70c5c4; }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #92b1c7;
+      border-radius: 30px;
+      padding: 5px 14px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 35px 0;
+    }
+
+    .steps article {
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+    }
+
+    .note {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      header .wrap { justify-content: center; }
+      .brand { margin-right: auto; }
+      .languages { margin-left: auto; }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+      }
+
+      html { scroll-padding-top: 140px; }
+    }
+
+    @media (max-width: 760px) {
+      header .wrap { gap: 12px; }
+      .brand { font-size: 18px; }
+      nav { gap: 10px 16px; }
+      nav a { font-size: 13px; }
+      .languages button { min-width: 36px; }
+
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .hero { padding-top: 40px; }
+
+      .hero img {
+        max-width: 460px;
+        justify-self: center;
+      }
+
+      .grid,
+      .steps { grid-template-columns: 1fr; }
+
+      .contact,
+      footer .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      section { padding: 50px 0; }
+
+      h1 {
+        font-size: clamp(32px, 7vw, 48px);
+        letter-spacing: -1px;
+      }
+
+      .button.secondary {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<header><div class="wrap"><a class="brand" href="#inicio"><span>INSTITUTO</span>HOLOS</a><nav aria-label="Navegação principal"><a href="#instituto">O Instituto</a><a href="#atuacao">Atuação</a><a href="#preservar">PRESERVAR</a><a href="#cooperacao">Cooperação</a></nav></div></header>
-<main id="conteudo">
-<div class="wrap hero" id="inicio"><div><div class="eyebrow">Educação · Ciência · Tecnologia</div><h1>Conhecimento que conecta.<br>Ciência que transforma.</h1><p class="lead">Uma proposta institucional para integrar formação, pesquisa e inovação, aproximando pessoas, instituições e campos do conhecimento.</p><a class="button" href="#instituto">Conheça o HOLOS</a> <a class="button secondary" href="#preservar">Explore o PRESERVAR</a></div><img src="assets/holos-logo.png" width="1536" height="1024" alt="Instituto HOLOS: dois anéis entrelaçados em azul e verde-petróleo, com volume tridimensional."></div>
-<section class="light" id="instituto"><div class="wrap split"><div><div class="eyebrow">O Instituto</div><h2>Uma visão de totalidade.<br>Uma construção colaborativa.</h2><p>HOLOS remete à palavra grega associada à ideia de todo, inteiro e totalidade. Essa perspectiva orienta a proposta do Instituto: conectar saberes e competências para compreender problemas complexos e desenvolver respostas fundamentadas.</p><p>A proposta reúne educação, pesquisa científica, desenvolvimento tecnológico e cooperação nacional e internacional, com abertura a diferentes áreas do conhecimento.</p></div><div><p class="quote">Integrar conhecimentos, desenvolver competências e construir caminhos para a inovação.</p><h3>Integridade como fundamento</h3><p>Rigor científico, transparência metodológica, rastreabilidade e independência na avaliação dos resultados orientam a estruturação dos programas. A evidência deve permitir revisar hipóteses, métodos e conclusões.</p><p class="note">O Instituto encontra-se em estruturação institucional. As atividades serão implantadas conforme os requisitos e as autorizações aplicáveis.</p></div></div></section>
-<section id="atuacao"><div class="wrap"><div class="eyebrow">Áreas de atuação previstas</div><h2>Da formação à aplicação do conhecimento.</h2><div class="grid"><article class="item"><span class="number">01 / EDUCAÇÃO</span><h3>Formação e desenvolvimento</h3><p>Cursos livres, formação continuada, capacitação e iniciativas de desenvolvimento de competências, conectando estudo, pesquisa e prática.</p></article><article class="item"><span class="number">02 / CIÊNCIA</span><h3>Pesquisa interdisciplinar</h3><p>Pesquisas básicas e aplicadas, métodos quantitativos, estudos ambientais e sociais, modelagem e análise de problemas complexos.</p></article><article class="item"><span class="number">03 / TECNOLOGIA</span><h3>Inovação e dados</h3><p>Desenvolvimento e avaliação de modelos, metodologias, software e soluções tecnológicas, incluindo ciência de dados e inteligência artificial.</p></article><article class="item"><span class="number">04 / CONEXÕES</span><h3>Cooperação científica</h3><p>Articulação de redes, projetos conjuntos, intercâmbio de competências e colaboração entre instituições brasileiras e internacionais.</p></article><article class="item"><span class="number">05 / APLICAÇÃO</span><h3>Estudos e projetos</h3><p>Pesquisa contratada, estudos técnicos, análise de dados, capacitação e gestão de projetos em educação, ciência e inovação.</p></article><article class="item"><span class="number">06 / CONHECIMENTO</span><h3>Difusão científica</h3><p>Eventos, publicações e ações de divulgação para aproximar a produção de conhecimento da sociedade e de seus desafios.</p></article></div></div></section>
-<section class="dark" id="preservar"><div class="wrap"><div class="eyebrow">Iniciativa científica internacional</div><h2>PRESERVAR</h2><div class="split"><div><p class="lead" style="color:#dce5eb">Ciência, territórios e resiliência.</p><p>Uma iniciativa em desenvolvimento que busca integrar conhecimentos, instituições e pessoas para a conservação da biodiversidade, a compreensão dos territórios e a resiliência diante dos desafios ambientais e climáticos.</p><p>Na arquitetura proposta, o Instituto HOLOS é a instituição fundadora e gestora do PRESERVAR, responsável pela articulação institucional e pela continuidade da iniciativa.</p></div><div><h3>Do território à decisão</h3><p>A proposta combina observação e experimentação em campo, integração de dados, modelagem e apoio à decisão. Os incêndios de vegetação e seus impactos constituem uma frente de investigação, inserida em uma agenda mais ampla de biodiversidade e sustentabilidade.</p><p>O Cerrado é apresentado como território de experimentação para conectar pesquisa, formação e inovação.</p></div></div><div class="grid"><article class="item"><span class="number" style="color:#8fdddd">01</span><h3>Ciência de campo</h3><p>Observação, medição e experimentação para compreender ecossistemas e fenômenos territoriais.</p></article><article class="item"><span class="number" style="color:#8fdddd">02</span><h3>Dados e modelagem</h3><p>Integração de fontes, análise de cenários e incertezas, simulação e produção de conhecimento.</p></article><article class="item"><span class="number" style="color:#8fdddd">03</span><h3>Decisão e ação humana</h3><p>Formação, cooperação e informações que possam apoiar gestores, pesquisadores e equipes em campo.</p></article></div></div></section>
-<section><div class="wrap split"><div><div class="eyebrow">Tecnologia em desenvolvimento</div><h2>Aero-Q</h2><p class="lead">Pesquisa para a inteligência territorial e o apoio à decisão.</p></div><div><span class="tag">Da pesquisa à integração progressiva</span><p>Aero-Q é a plataforma em desenvolvimento pela Quartzgroup Technologies LLC, apresentada como componente tecnológico da iniciativa PRESERVAR.</p><p>A trajetória proposta parte da pesquisa sobre ocorrência de incêndios e avança para a integração de dados, modelos especializados e ferramentas de análise. A visão de uma plataforma integrada depende de pesquisa, validação e desenvolvimento por etapas.</p></div></div></section>
-<section class="light" id="cooperacao"><div class="wrap"><div class="eyebrow">Cooperação nacional e internacional</div><h2>Competências complementares.<br>Objetivos compartilhados.</h2><p class="intro">O PRESERVAR propõe uma articulação entre o Instituto HOLOS, a Quartzgroup Technologies LLC, o Instituto de Formação e Tecnologia (IFT) e a Techsol, com funções complementares em pesquisa, formação, desenvolvimento tecnológico e cooperação.</p><div class="steps"><article><h3>Diálogo científico</h3><p>Aproximar pesquisadores e instituições em torno de problemas e projetos relevantes.</p></article><article><h3>Projetos colaborativos</h3><p>Definir objetivos, responsabilidades e métodos de trabalho, respeitando a autonomia científica.</p></article><article><h3>Continuidade institucional</h3><p>Construir instrumentos de governança, financiamento e acompanhamento que sustentem a cooperação.</p></article></div><p class="note">A cooperação internacional está em desenvolvimento. A participação de instituições e pesquisadores dependerá dos instrumentos próprios de cada colaboração.</p></div></section>
-<section><div class="wrap contact"><div><div class="eyebrow">Articulação institucional</div><h2>Conecte-se à construção do HOLOS.</h2><p>Conheça a trajetória de Jucelio Pereira da Silva, responsável pela proposta do Instituto.</p></div><a class="button" href="https://www.linkedin.com/in/jucelio-pereira-da-silva-ba420945/" target="_blank" rel="noopener noreferrer">Perfil de Jucelio no LinkedIn ↗</a></div></section>
-</main><footer><div class="wrap"><span>© 2026 Instituto HOLOS · Educação, Ciência e Tecnologia</span><span>Proposta institucional em estruturação · Anápolis, Goiás, Brasil</span></div></footer>
-</body></html>
+  <a class="skip" href="#conteudo" data-i18n="0">Ir para o conteúdo</a>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#inicio">
+        <span data-i18n="1">INSTITUTO</span>HOLOS
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <a href="#instituto" data-i18n="2">O Instituto</a>
+        <a href="#atuacao" data-i18n="3">Atuação</a>
+        <a href="#preservar" data-i18n="4">PRESERVAR</a>
+        <a href="#cooperacao" data-i18n="5">Cooperação</a>
+      </nav>
+
+      <div class="languages" role="group" aria-label="Selecionar idioma">
+        <button type="button" data-lang="pt" lang="pt-BR" aria-label="Português" aria-pressed="true">PT</button>
+        <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" data-lang="es" lang="es" aria-label="Español" aria-pressed="false">ES</button>
+        <button type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="wrap hero" id="inicio">
+      <div>
+        <div class="eyebrow" data-i18n="6">Educação · Ciência · Tecnologia</div>
+        <h1 class="translated-heading" data-heading="0">Conhecimento que conecta.<br>Ciência que transforma.</h1>
+        <p class="lead" data-i18n="7">Uma proposta institucional para integrar formação, pesquisa e inovação, aproximando pessoas, instituições e campos do conhecimento.</p>
+        <a class="button" href="#instituto" data-i18n="8">Conheça o HOLOS</a>
+        <a class="button secondary" href="#preservar" data-i18n="9">Explore o PRESERVAR</a>
+      </div>
+
+      <img src="assets/holos-logo.png" width="1536" height="1024" alt="Instituto HOLOS: dois anéis entrelaçados em azul e verde-petróleo, com volume tridimensional.">
+    </div>
+
+    <section class="light" id="instituto">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow" data-i18n="10">O Instituto</div>
+          <h2 class="translated-heading" data-heading="1">Uma visão de totalidade.<br>Uma construção colaborativa.</h2>
+          <p data-i18n="11">HOLOS remete à palavra grega associada à ideia de todo, inteiro e totalidade. Essa perspectiva orienta a proposta do Instituto: conectar saberes e competências para compreender problemas complexos e desenvolver respostas fundamentadas.</p>
+          <p data-i18n="12">A proposta reúne educação, pesquisa científica, desenvolvimento tecnológico e cooperação nacional e internacional, com abertura a diferentes áreas do conhecimento.</p>
+        </div>
+
+        <div>
+          <p class="quote" data-i18n="13">Integrar conhecimentos, desenvolver competências e construir caminhos para a inovação.</p>
+          <h3 data-i18n="14">Integridade como fundamento</h3>
+          <p data-i18n="15">Rigor científico, transparência metodológica, rastreabilidade e independência na avaliação dos resultados orientam a estruturação dos programas. A evidência deve permitir revisar hipóteses, métodos e conclusões.</p>
+          <p class="note" data-i18n="16">O Instituto encontra-se em estruturação institucional. As atividades serão implantadas conforme os requisitos e as autorizações aplicáveis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="atuacao">
+      <div class="wrap">
+        <div class="eyebrow" data-i18n="17">Áreas de atuação previstas</div>
+        <h2 data-i18n="18">Da formação à aplicação do conhecimento.</h2>
+
+        <div class="grid">
+          <article class="item">
+            <span class="number" data-i18n="19">01 / EDUCAÇÃO</span>
+            <h3 data-i18n="20">Formação e desenvolvimento</h3>
+            <p data-i18n="21">Cursos livres, formação continuada, capacitação e iniciativas de desenvolvimento de competências, conectando estudo, pesquisa e prática.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="22">02 / CIÊNCIA</span>
+            <h3 data-i18n="23">Pesquisa interdisciplinar</h3>
+            <p data-i18n="24">Pesquisas básicas e aplicadas, métodos quantitativos, estudos ambientais e sociais, modelagem e análise de problemas complexos.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="25">03 / TECNOLOGIA</span>
+            <h3 data-i18n="26">Inovação e dados</h3>
+            <p data-i18n="27">Desenvolvimento e avaliação de modelos, metodologias, software e soluções tecnológicas, incluindo ciência de dados e inteligência artificial.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="28">04 / CONEXÕES</span>
+            <h3 data-i18n="29">Cooperação científica</h3>
+            <p data-i18n="30">Articulação de redes, projetos conjuntos, intercâmbio de competências e colaboração entre instituições brasileiras e internacionais.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="31">05 / APLICAÇÃO</span>
+            <h3 data-i18n="32">Estudos e projetos</h3>
+            <p data-i18n="33">Pesquisa contratada, estudos técnicos, análise de dados, capacitação e gestão de projetos em educação, ciência e inovação.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="34">06 / CONHECIMENTO</span>
+            <h3 data-i18n="35">Difusão científica</h3>
+            <p data-i18n="36">Eventos, publicações e ações de divulgação para aproximar a produção de conhecimento da sociedade e de seus desafios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="preservar">
+      <div class="wrap">
+        <div class="eyebrow" data-i18n="37">Iniciativa científica internacional</div>
+        <h2 data-i18n="38">PRESERVAR</h2>
+
+        <div class="split">
+          <div>
+            <p class="lead" data-i18n="39">Ciência, territórios e resiliência.</p>
+            <p data-i18n="40">Uma iniciativa em desenvolvimento que busca integrar conhecimentos, instituições e pessoas para a conservação da biodiversidade, a compreensão dos territórios e a resiliência diante dos desafios ambientais e climáticos.</p>
+            <p data-i18n="41">Na arquitetura proposta, o Instituto HOLOS é a instituição fundadora e gestora do PRESERVAR, responsável pela articulação institucional e pela continuidade da iniciativa.</p>
+          </div>
+
+          <div>
+            <h3 data-i18n="42">Do território à decisão</h3>
+            <p data-i18n="43">A proposta combina observação e experimentação em campo, integração de dados, modelagem e apoio à decisão. Os incêndios de vegetação e seus impactos constituem uma frente de investigação, inserida em uma agenda mais ampla de biodiversidade e sustentabilidade.</p>
+            <p data-i18n="44">O Cerrado é apresentado como território de experimentação para conectar pesquisa, formação e inovação.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="item">
+            <span class="number" data-i18n="45">01</span>
+            <h3 data-i18n="46">Ciência de campo</h3>
+            <p data-i18n="47">Observação, medição e experimentação para compreender ecossistemas e fenômenos territoriais.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="48">02</span>
+            <h3 data-i18n="49">Dados e modelagem</h3>
+            <p data-i18n="50">Integração de fontes, análise de cenários e incertezas, simulação e produção de conhecimento.</p>
+          </article>
+
+          <article class="item">
+            <span class="number" data-i18n="51">03</span>
+            <h3 data-i18n="52">Decisão e ação humana</h3>
+            <p data-i18n="53">Formação, cooperação e informações que possam apoiar gestores, pesquisadores e equipes em campo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow" data-i18n="54">Tecnologia em desenvolvimento</div>
+          <h2 data-i18n="55">Aero-Q</h2>
+          <p class="lead" data-i18n="56">Pesquisa para a inteligência territorial e o apoio à decisão.</p>
+        </div>
+
+        <div>
+          <span class="tag" data-i18n="57">Da pesquisa à integração progressiva</span>
+          <p data-i18n="58">Aero-Q é a plataforma em desenvolvimento pela Quartzgroup Technologies LLC, apresentada como componente tecnológico da iniciativa PRESERVAR.</p>
+          <p data-i18n="59">A trajetória proposta parte da pesquisa sobre ocorrência de incêndios e avança para a integração de dados, modelos especializados e ferramentas de análise. A visão de uma plataforma integrada depende de pesquisa, validação e desenvolvimento por etapas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="cooperacao">
+      <div class="wrap">
+        <div class="eyebrow" data-i18n="60">Cooperação nacional e internacional</div>
+        <h2 class="translated-heading" data-heading="2">Competências complementares.<br>Objetivos compartilhados.</h2>
+        <p class="intro" data-i18n="61">O PRESERVAR propõe uma articulação entre o Instituto HOLOS, a Quartzgroup Technologies LLC, o Instituto de Formação e Tecnologia (IFT) e a Techsol, com funções complementares em pesquisa, formação, desenvolvimento tecnológico e cooperação.</p>
+
+        <div class="steps">
+          <article>
+            <h3 data-i18n="62">Diálogo científico</h3>
+            <p data-i18n="63">Aproximar pesquisadores e instituições em torno de problemas e projetos relevantes.</p>
+          </article>
+
+          <article>
+            <h3 data-i18n="64">Projetos colaborativos</h3>
+            <p data-i18n="65">Definir objetivos, responsabilidades e métodos de trabalho, respeitando a autonomia científica.</p>
+          </article>
+
+          <article>
+            <h3 data-i18n="66">Continuidade institucional</h3>
+            <p data-i18n="67">Construir instrumentos de governança, financiamento e acompanhamento que sustentem a cooperação.</p>
+          </article>
+        </div>
+
+        <p class="note" data-i18n="68">A cooperação internacional está em desenvolvimento. A participação de instituições e pesquisadores dependerá dos instrumentos próprios de cada colaboração.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap contact">
+        <div>
+          <div class="eyebrow" data-i18n="69">Articulação institucional</div>
+          <h2 data-i18n="70">Conecte-se à construção do HOLOS.</h2>
+          <p data-i18n="71">Conheça a trajetória de Jucelio Pereira da Silva, responsável pela proposta do Instituto.</p>
+        </div>
+
+        <a class="button" href="https://www.linkedin.com/in/jucelio-pereira-da-silva-ba420945/" target="_blank" rel="noopener noreferrer" data-i18n="72">Perfil de Jucelio no LinkedIn ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span data-i18n="73">© 2026 Instituto HOLOS · Educação, Ciência e Tecnologia</span>
+      <span data-i18n="74">Proposta institucional em estruturação · Anápolis, Goiás, Brasil</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const textElements = [...document.querySelectorAll('[data-i18n]')];
+      const headingElements = [...document.querySelectorAll('[data-heading]')];
+
+      const portugueseTexts = [];
+      textElements.forEach(element => {
+        portugueseTexts[Number(element.dataset.i18n)] = element.textContent;
+      });
+
+      const portugueseHeadings = [];
+      headingElements.forEach(element => {
+        portugueseHeadings[Number(element.dataset.heading)] =
+          [...element.childNodes].map(node =>
+            node.nodeName === 'BR' ? '\n' : node.textContent
+          ).join('');
+      });
+
+      const translations = {
+        pt: {
+          lang: 'pt-BR',
+          title: 'Instituto HOLOS | Educação, Ciência e Tecnologia',
+          description: document.querySelector('meta[name="description"]').content,
+          nav: 'Navegação principal',
+          languages: 'Selecionar idioma',
+          alt: document.querySelector('.hero img').alt,
+          texts: portugueseTexts,
+          headings: portugueseHeadings
+        },
+
+        en: {
+          lang: 'en',
+          title: 'Instituto HOLOS | Education, Science and Technology',
+          description: 'Discover Instituto HOLOS: integrating education, research, technology and international cooperation. PRESERVAR: science, territories and resilience.',
+          nav: 'Main navigation',
+          languages: 'Select language',
+          alt: 'Instituto HOLOS: two interwoven blue and teal rings with three-dimensional volume.',
+          headings: [
+            'Knowledge that connects.\nScience that transforms.',
+            'A vision of the whole.\nA collaborative endeavor.',
+            'Complementary expertise.\nShared objectives.'
+          ],
+          texts: [
+            'Skip to content',
+            'INSTITUTO',
+            'The Institute',
+            'Our focus',
+            'PRESERVAR',
+            'Cooperation',
+            'Education · Science · Technology',
+            'An institutional proposal to integrate education, research and innovation, bringing together people, institutions and fields of knowledge.',
+            'Discover HOLOS',
+            'Explore PRESERVAR',
+            'The Institute',
+            'HOLOS draws on the Greek word associated with the idea of the whole, completeness and totality. This perspective guides the Institute’s proposal: connecting knowledge and expertise to understand complex problems and develop evidence-based responses.',
+            'The proposal brings together education, scientific research, technological development, and national and international cooperation, welcoming different fields of knowledge.',
+            'Integrating knowledge, developing skills and building pathways to innovation.',
+            'Integrity as a foundation',
+            'Scientific rigor, methodological transparency, traceability and independence in assessing results guide the development of the programs. Evidence should enable hypotheses, methods and conclusions to be revised.',
+            'The Institute is in the process of being established. Activities will be implemented in accordance with applicable requirements and authorizations.',
+            'Planned areas of activity',
+            'From education to the application of knowledge.',
+            '01 / EDUCATION',
+            'Learning and development',
+            'Non-degree courses, continuing education, training and skills development initiatives, connecting study, research and practice.',
+            '02 / SCIENCE',
+            'Interdisciplinary research',
+            'Basic and applied research, quantitative methods, environmental and social studies, modeling and analysis of complex problems.',
+            '03 / TECHNOLOGY',
+            'Innovation and data',
+            'Development and evaluation of models, methodologies, software and technological solutions, including data science and artificial intelligence.',
+            '04 / CONNECTIONS',
+            'Scientific cooperation',
+            'Building networks, joint projects, exchanges of expertise and collaboration between Brazilian and international institutions.',
+            '05 / APPLICATION',
+            'Studies and projects',
+            'Contract research, technical studies, data analysis, training and project management in education, science and innovation.',
+            '06 / KNOWLEDGE',
+            'Science communication',
+            'Events, publications and outreach activities to bring knowledge production closer to society and its challenges.',
+            'An international scientific initiative',
+            'PRESERVAR',
+            'Science, territories and resilience.',
+            'An initiative under development that seeks to bring together knowledge, institutions and people for biodiversity conservation, an understanding of territories, and resilience in the face of environmental and climate challenges.',
+            'In the proposed structure, Instituto HOLOS is the founding and managing institution of PRESERVAR, responsible for institutional coordination and the continuity of the initiative.',
+            'From territories to decisions',
+            'The proposal combines field observation and experimentation, data integration, modeling and decision support. Vegetation fires and their impacts are one research focus within a broader biodiversity and sustainability agenda.',
+            'The Cerrado is presented as a setting for experimentation that connects research, education and innovation.',
+            '01',
+            'Field science',
+            'Observation, measurement and experimentation to understand ecosystems and territorial phenomena.',
+            '02',
+            'Data and modeling',
+            'Integration of sources, analysis of scenarios and uncertainties, simulation and knowledge production.',
+            '03',
+            'Decisions and human action',
+            'Training, cooperation and information that can support managers, researchers and field teams.',
+            'Technology under development',
+            'Aero-Q',
+            'Research for territorial intelligence and decision support.',
+            'From research to progressive integration',
+            'Aero-Q is the platform being developed by Quartzgroup Technologies LLC, presented as a technological component of the PRESERVAR initiative.',
+            'The proposed pathway starts with research on fire occurrence and moves toward the integration of data, specialized models and analytical tools. The vision of an integrated platform depends on research, validation and staged development.',
+            'National and international cooperation',
+            'PRESERVAR proposes coordination among Instituto HOLOS, Quartzgroup Technologies LLC, Instituto de Formação e Tecnologia (IFT) and Techsol, with complementary roles in research, education, technological development and cooperation.',
+            'Scientific dialogue',
+            'Bringing researchers and institutions together around relevant problems and projects.',
+            'Collaborative projects',
+            'Defining objectives, responsibilities and working methods while respecting scientific autonomy.',
+            'Institutional continuity',
+            'Building governance, funding and monitoring arrangements that sustain cooperation.',
+            'International cooperation is under development. Participation by institutions and researchers will depend on the specific arrangements for each collaboration.',
+            'Institutional coordination',
+            'Connect with the development of HOLOS.',
+            'Learn about the background of Jucelio Pereira da Silva, who is responsible for the Institute’s proposal.',
+            'Jucelio’s LinkedIn profile ↗',
+            '© 2026 Instituto HOLOS · Education, Science and Technology',
+            'Institutional proposal under development · Anápolis, Goiás, Brazil'
+          ]
+        },
+
+        es: {
+          lang: 'es',
+          title: 'Instituto HOLOS | Educación, Ciencia y Tecnología',
+          description: 'Conozca Instituto HOLOS: educación, investigación, tecnología y cooperación internacional. PRESERVAR: ciencia, territorios y resiliencia.',
+          nav: 'Navegación principal',
+          languages: 'Seleccionar idioma',
+          alt: 'Instituto HOLOS: dos anillos entrelazados en azul y verde petróleo, con volumen tridimensional.',
+          headings: [
+            'Conocimiento que conecta.\nCiencia que transforma.',
+            'Una visión de totalidad.\nUna construcción colaborativa.',
+            'Competencias complementarias.\nObjetivos compartidos.'
+          ],
+          texts: [
+            'Ir al contenido',
+            'INSTITUTO',
+            'El Instituto',
+            'Áreas de actuación',
+            'PRESERVAR',
+            'Cooperación',
+            'Educación · Ciencia · Tecnología',
+            'Una propuesta institucional para integrar formación, investigación e innovación, acercando personas, instituciones y campos del conocimiento.',
+            'Conozca HOLOS',
+            'Explore PRESERVAR',
+            'El Instituto',
+            'HOLOS remite a la palabra griega asociada a la idea de todo, entero y totalidad. Esta perspectiva orienta la propuesta del Instituto: conectar saberes y competencias para comprender problemas complejos y desarrollar respuestas fundamentadas.',
+            'La propuesta reúne educación, investigación científica, desarrollo tecnológico y cooperación nacional e internacional, con apertura a diferentes áreas del conocimiento.',
+            'Integrar conocimientos, desarrollar competencias y construir caminos hacia la innovación.',
+            'La integridad como fundamento',
+            'El rigor científico, la transparencia metodológica, la trazabilidad y la independencia en la evaluación de resultados orientan la estructuración de los programas. La evidencia debe permitir revisar hipótesis, métodos y conclusiones.',
+            'El Instituto se encuentra en proceso de estructuración institucional. Las actividades se implementarán conforme a los requisitos y las autorizaciones aplicables.',
+            'Áreas de actuación previstas',
+            'De la formación a la aplicación del conocimiento.',
+            '01 / EDUCACIÓN',
+            'Formación y desarrollo',
+            'Cursos no conducentes a títulos oficiales, formación continua, capacitación e iniciativas de desarrollo de competencias que conectan estudio, investigación y práctica.',
+            '02 / CIENCIA',
+            'Investigación interdisciplinaria',
+            'Investigación básica y aplicada, métodos cuantitativos, estudios ambientales y sociales, modelización y análisis de problemas complejos.',
+            '03 / TECNOLOGÍA',
+            'Innovación y datos',
+            'Desarrollo y evaluación de modelos, metodologías, software y soluciones tecnológicas, incluida la ciencia de datos y la inteligencia artificial.',
+            '04 / CONEXIONES',
+            'Cooperación científica',
+            'Articulación de redes, proyectos conjuntos, intercambio de competencias y colaboración entre instituciones brasileñas e internacionales.',
+            '05 / APLICACIÓN',
+            'Estudios y proyectos',
+            'Investigación por contrato, estudios técnicos, análisis de datos, capacitación y gestión de proyectos en educación, ciencia e innovación.',
+            '06 / CONOCIMIENTO',
+            'Divulgación científica',
+            'Eventos, publicaciones y acciones de divulgación para acercar la producción de conocimiento a la sociedad y a sus desafíos.',
+            'Iniciativa científica internacional',
+            'PRESERVAR',
+            'Ciencia, territorios y resiliencia.',
+            'Una iniciativa en desarrollo que busca integrar conocimientos, instituciones y personas para la conservación de la biodiversidad, la comprensión de los territorios y la resiliencia ante los desafíos ambientales y climáticos.',
+            'En la arquitectura propuesta, Instituto HOLOS es la institución fundadora y gestora de PRESERVAR, responsable de la articulación institucional y de la continuidad de la iniciativa.',
+            'Del territorio a la decisión',
+            'La propuesta combina observación y experimentación en campo, integración de datos, modelización y apoyo a la toma de decisiones. Los incendios de vegetación y sus impactos constituyen una línea de investigación dentro de una agenda más amplia de biodiversidad y sostenibilidad.',
+            'El Cerrado se presenta como territorio de experimentación para conectar investigación, formación e innovación.',
+            '01',
+            'Ciencia de campo',
+            'Observación, medición y experimentación para comprender los ecosistemas y los fenómenos territoriales.',
+            '02',
+            'Datos y modelización',
+            'Integración de fuentes, análisis de escenarios e incertidumbres, simulación y producción de conocimiento.',
+            '03',
+            'Decisión y acción humana',
+            'Formación, cooperación e información que puedan apoyar a gestores, investigadores y equipos de campo.',
+            'Tecnología en desarrollo',
+            'Aero-Q',
+            'Investigación para la inteligencia territorial y el apoyo a la toma de decisiones.',
+            'De la investigación a la integración progresiva',
+            'Aero-Q es la plataforma en desarrollo por Quartzgroup Technologies LLC, presentada como componente tecnológico de la iniciativa PRESERVAR.',
+            'La trayectoria propuesta parte de la investigación sobre la ocurrencia de incendios y avanza hacia la integración de datos, modelos especializados y herramientas de análisis. La visión de una plataforma integrada depende de la investigación, la validación y el desarrollo por etapas.',
+            'Cooperación nacional e internacional',
+            'PRESERVAR propone una articulación entre Instituto HOLOS, Quartzgroup Technologies LLC, Instituto de Formação e Tecnologia (IFT) y Techsol, con funciones complementarias en investigación, formación, desarrollo tecnológico y cooperación.',
+            'Diálogo científico',
+            'Acercar investigadores e instituciones en torno a problemas y proyectos relevantes.',
+            'Proyectos colaborativos',
+            'Definir objetivos, responsabilidades y métodos de trabajo, respetando la autonomía científica.',
+            'Continuidad institucional',
+            'Construir mecanismos de gobernanza, financiación y seguimiento que sostengan la cooperación.',
+            'La cooperación internacional está en desarrollo. La participación de instituciones e investigadores dependerá de los instrumentos específicos de cada colaboración.',
+            'Articulación institucional',
+            'Conéctese con la construcción de HOLOS.',
+            'Conozca la trayectoria de Jucelio Pereira da Silva, responsable de la propuesta del Instituto.',
+            'Perfil de Jucelio en LinkedIn ↗',
+            '© 2026 Instituto HOLOS · Educación, Ciencia y Tecnología',
+            'Propuesta institucional en estructuración · Anápolis, Goiás, Brasil'
+          ]
+        },
+
+        fr: {
+          lang: 'fr',
+          title: 'Instituto HOLOS | Éducation, Science et Technologie',
+          description: 'Découvrez Instituto HOLOS : éducation, recherche, technologie et coopération internationale. PRESERVAR : science, territoires et résilience.',
+          nav: 'Navigation principale',
+          languages: 'Choisir la langue',
+          alt: 'Instituto HOLOS : deux anneaux entrelacés en bleu et bleu-vert, avec un volume tridimensionnel.',
+          headings: [
+            'Des connaissances qui relient.\nUne science qui transforme.',
+            'Une vision de la totalité.\nUne construction collaborative.',
+            'Des compétences complémentaires.\nDes objectifs partagés.'
+          ],
+          texts: [
+            'Aller au contenu',
+            'INSTITUTO',
+            'L’Institut',
+            'Domaines d’activité',
+            'PRESERVAR',
+            'Coopération',
+            'Éducation · Science · Technologie',
+            'Un projet institutionnel visant à intégrer la formation, la recherche et l’innovation, en rapprochant les personnes, les institutions et les domaines de connaissance.',
+            'Découvrir HOLOS',
+            'Explorer PRESERVAR',
+            'L’Institut',
+            'HOLOS renvoie au mot grec associé à l’idée de tout, d’entier et de totalité. Cette perspective guide le projet de l’Institut : relier les savoirs et les compétences pour comprendre des problèmes complexes et élaborer des réponses fondées.',
+            'Le projet réunit l’éducation, la recherche scientifique, le développement technologique et la coopération nationale et internationale, avec une ouverture à différents domaines de connaissance.',
+            'Intégrer les connaissances, développer les compétences et ouvrir des voies vers l’innovation.',
+            'L’intégrité comme fondement',
+            'La rigueur scientifique, la transparence méthodologique, la traçabilité et l’indépendance dans l’évaluation des résultats guident la structuration des programmes. Les données probantes doivent permettre de réviser les hypothèses, les méthodes et les conclusions.',
+            'L’Institut est en cours de structuration institutionnelle. Les activités seront mises en place conformément aux exigences et aux autorisations applicables.',
+            'Domaines d’activité envisagés',
+            'De la formation à l’application des connaissances.',
+            '01 / ÉDUCATION',
+            'Formation et développement',
+            'Formations non diplômantes, formation continue et initiatives de développement des compétences, reliant études, recherche et pratique.',
+            '02 / SCIENCE',
+            'Recherche interdisciplinaire',
+            'Recherche fondamentale et appliquée, méthodes quantitatives, études environnementales et sociales, modélisation et analyse de problèmes complexes.',
+            '03 / TECHNOLOGIE',
+            'Innovation et données',
+            'Développement et évaluation de modèles, de méthodologies, de logiciels et de solutions technologiques, notamment en science des données et en intelligence artificielle.',
+            '04 / CONNEXIONS',
+            'Coopération scientifique',
+            'Structuration de réseaux, projets communs, échanges de compétences et collaboration entre institutions brésiliennes et internationales.',
+            '05 / APPLICATION',
+            'Études et projets',
+            'Recherche contractuelle, études techniques, analyse de données, formation et gestion de projets dans les domaines de l’éducation, de la science et de l’innovation.',
+            '06 / CONNAISSANCES',
+            'Diffusion scientifique',
+            'Événements, publications et actions de diffusion pour rapprocher la production de connaissances de la société et de ses défis.',
+            'Une initiative scientifique internationale',
+            'PRESERVAR',
+            'Science, territoires et résilience.',
+            'Une initiative en développement qui vise à intégrer les connaissances, les institutions et les personnes pour la conservation de la biodiversité, la compréhension des territoires et la résilience face aux défis environnementaux et climatiques.',
+            'Dans l’architecture proposée, Instituto HOLOS est l’institution fondatrice et gestionnaire de PRESERVAR, responsable de l’articulation institutionnelle et de la continuité de l’initiative.',
+            'Du territoire à la décision',
+            'Le projet associe observation et expérimentation sur le terrain, intégration des données, modélisation et aide à la décision. Les incendies de végétation et leurs impacts constituent un axe de recherche au sein d’un programme plus large consacré à la biodiversité et à la durabilité.',
+            'Le Cerrado est présenté comme un territoire d’expérimentation reliant recherche, formation et innovation.',
+            '01',
+            'Science de terrain',
+            'Observation, mesure et expérimentation pour comprendre les écosystèmes et les phénomènes territoriaux.',
+            '02',
+            'Données et modélisation',
+            'Intégration des sources, analyse des scénarios et des incertitudes, simulation et production de connaissances.',
+            '03',
+            'Décision et action humaine',
+            'Formation, coopération et informations pouvant accompagner les gestionnaires, les chercheurs et les équipes de terrain.',
+            'Technologie en développement',
+            'Aero-Q',
+            'Recherche pour l’intelligence territoriale et l’aide à la décision.',
+            'De la recherche à l’intégration progressive',
+            'Aero-Q est la plateforme en développement par Quartzgroup Technologies LLC, présentée comme une composante technologique de l’initiative PRESERVAR.',
+            'La trajectoire proposée part de la recherche sur l’occurrence des incendies et progresse vers l’intégration de données, de modèles spécialisés et d’outils d’analyse. La vision d’une plateforme intégrée repose sur la recherche, la validation et un développement par étapes.',
+            'Coopération nationale et internationale',
+            'PRESERVAR propose une articulation entre Instituto HOLOS, Quartzgroup Technologies LLC, Instituto de Formação e Tecnologia (IFT) et Techsol, avec des fonctions complémentaires en recherche, formation, développement technologique et coopération.',
+            'Dialogue scientifique',
+            'Rapprocher les chercheurs et les institutions autour de problèmes et de projets pertinents.',
+            'Projets collaboratifs',
+            'Définir les objectifs, les responsabilités et les méthodes de travail, dans le respect de l’autonomie scientifique.',
+            'Continuité institutionnelle',
+            'Construire des dispositifs de gouvernance, de financement et de suivi qui soutiennent la coopération.',
+            'La coopération internationale est en développement. La participation des institutions et des chercheurs dépendra des instruments propres à chaque collaboration.',
+            'Articulation institutionnelle',
+            'Participez à la construction de HOLOS.',
+            'Découvrez le parcours de Jucelio Pereira da Silva, responsable du projet de l’Institut.',
+            'Profil LinkedIn de Jucelio ↗',
+            '© 2026 Instituto HOLOS · Éducation, Science et Technologie',
+            'Projet institutionnel en cours de structuration · Anápolis, Goiás, Brésil'
+          ]
+        }
+      };
+
+      const storageKey = 'instituto-holos-language';
+
+      function applyLanguage(language, remember = false) {
+        if (!Object.prototype.hasOwnProperty.call(translations, language)) {
+          language = 'pt';
+        }
+
+        const content = translations[language];
+
+        document.documentElement.lang = content.lang;
+        document.title = content.title;
+
+        document.querySelector('meta[name="description"]').content =
+          content.description;
+
+        document.querySelector('nav').setAttribute(
+          'aria-label', content.nav
+        );
+
+        document.querySelector('.languages').setAttribute(
+          'aria-label', content.languages
+        );
+
+        document.querySelector('.hero img').alt = content.alt;
+
+        textElements.forEach(element => {
+          element.textContent =
+            content.texts[Number(element.dataset.i18n)];
+        });
+
+        headingElements.forEach(element => {
+          element.textContent =
+            content.headings[Number(element.dataset.heading)];
+        });
+
+        document.querySelectorAll('[data-lang]').forEach(button => {
+          button.setAttribute(
+            'aria-pressed',
+            String(button.dataset.lang === language)
+          );
+        });
+
+        if (remember) {
+          try {
+            localStorage.setItem(storageKey, language);
+          } catch (_) {}
+
+          try {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', language);
+            history.replaceState(null, '', url);
+          } catch (_) {}
+        }
+      }
+
+      let savedLanguage = 'pt';
+
+      try {
+        savedLanguage = localStorage.getItem(storageKey) || 'pt';
+      } catch (_) {}
+
+      const requestedLanguage =
+        new URLSearchParams(window.location.search).get('lang');
+
+      applyLanguage(requestedLanguage || savedLanguage);
+
+      document.querySelectorAll('[data-lang]').forEach(button => {
+        button.addEventListener('click', () => {
+          applyLanguage(button.dataset.lang, true);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
